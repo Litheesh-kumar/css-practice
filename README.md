@@ -1,2 +1,1 @@
-# css-practice.github.io
-css practice
+http://www.css-practice-litheesh.com/qr-code-component-main

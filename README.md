@@ -1,2 +1,2 @@
-http://www.css-practice-litheesh.com/qr-code-component-main
-http://www.css-practice-litheesh.com/recipe-page-main
+https://litheesh-kumar.github.io/css-practice/qr-code-component-main/
+https://litheesh-kumar.github.io/css-practice/recipe-page-main

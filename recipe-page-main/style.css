@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+
+body{
+    font-family: "Outfit", sans-serif;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(30, 54%, 90%);
+}
+
+.recipe__container{
+    width: 100%;
+    background-color: hsl(0, 0%, 100%);
+    padding: 1rem;
+}
+
+.recipe__container img{
+    height: 300px;
+    width: 100%;
+}
+
+.recipe__container h1{
+    color: hsl(24, 5%, 18%);
+}
+.recipe__preparation{
+    background-color:hsl(330, 100%, 98%);
+    padding: 1.5rem;
+}
+.preparation__title{
+    color: hsl(332, 51%, 32%);
+}
+.preparation__lists{
+    line-height: 2rem;
+}
+
+.preparation__list span{
+    color: hsl(30, 10%, 34%);;
+    font-weight: 600;
+}
+
+.recipe__ingredients{
+    border-bottom: 1px solid hsl(14, 45%, 90%);
+}
+.ingredients__title,.instruction__title,.nutrition__title{
+    color:  hsl(14, 45%, 36%);
+}
+.ingredients__lists{
+    line-height: 2rem;
+}
+
+.recipe__instruction{
+    border-bottom: 1px solid hsl(14, 45%, 90%);
+}
+.instruction__lists{
+    line-height: 2rem;
+    list-style:decimal;
+}
+
+.instruction__list span{
+    color: hsl(30, 10%, 34%);
+    font-weight: 600;
+}
+.nutrition__table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.table__row{
+    border-bottom: 1px solid hsl(14, 45%, 90%);
+}
+.table__row td{
+    padding: 0.5rem 1.5rem;
+}
+li::marker{
+    color:  hsl(14, 45%, 36%);
+}
+
+@media (max-width:750px) and (min-width: 400px)  {
+    .recipe__container{
+        width: 70%;
+        padding: 1.5rem;
+        border-radius: 1.5rem;
+        margin: 5rem 0;    
+        padding: 1.5rem;
+
+    }
+    
+}
+
+@media (min-width:750px){
+    .recipe__container{
+        width: 50%;
+        padding: 1.5rem;
+        border-radius: 1.5rem;
+        margin: 5rem 0;
+        padding: 1.5rem;
+
+    }
+}

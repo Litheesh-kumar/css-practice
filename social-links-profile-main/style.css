@@ -12,6 +12,7 @@ body{
     font-family: "Inter", sans-serif;
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color:  hsl(0, 0%, 8%);
@@ -39,7 +40,7 @@ body{
 }
 .container h4{
     color: hsl(75, 94%, 57%);
-    margin-top: 0;    
+    margin-top: 0;
 
 }
 .container p{
@@ -54,4 +55,9 @@ body{
     padding: 1rem;
     background-color: hsl(0, 0%, 20%);
 
+}
+
+.attribution{
+    position: relative;
+    top: 3.5rem;
 }

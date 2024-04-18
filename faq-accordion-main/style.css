@@ -24,7 +24,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url('/assets/images/background-pattern-desktop.svg') left top/auto 48% no-repeat border-box fixed,var(--Lightpink);
+    background: url('./assets/images/background-pattern-desktop.svg') left top/auto 48% no-repeat border-box fixed,var(--Lightpink);
     /* background-size: 100% 40%; */
 }
 

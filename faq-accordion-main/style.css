@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Lightpink: hsl(275, 100%, 97%);
+    --Grayishpurple: hsl(292, 16%, 49%);
+    --Darkpurple: hsl(292, 42%, 14%);
+}
+
+html{
+    height: 100%;
+}
+body{
+    font-family: "Work Sans", sans-serif;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('/assets/images/background-pattern-desktop.svg') left top/auto 48% no-repeat border-box fixed,var(--Lightpink);
+    /* background-size: 100% 40%; */
+}
+
+.faq__container{
+    max-width: 30rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    background-color:var(--White)
+}
+
+.faq__container img{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.section__title{
+    display: inline-block;
+    vertical-align: middle;
+}
+.faq__elements{
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.faq__elements .icons{
+    position: absolute;
+    right: 2rem;
+    transform: translateY(-0.3rem);
+    cursor: pointer;
+}
+
+.faq__question{
+    color: var(--Darkpurple);
+    font-weight: 800;
+    cursor: pointer;
+    width: 80%;
+
+}
+
+.faq__question:hover{
+    color:#AD28EB;
+}
+
+.faq__answer{
+    color: var(--Grayishpurple);
+    display: none;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.active{
+    display: block;
+}
+
+.attribution{
+    position: relative;
+    top: 4rem;
+}
+
+@media (max-width: 520px){
+    .faq__container{
+        max-width: 22rem;
+    }
+}
+
+@media (max-width: 348px){
+    .faq__container{
+        max-width: 18rem;
+    }
+}

@@ -1,39 +1,21 @@
-const faqElements = document.querySelectorAll('.faq__elements');
-const faqQuestion = document.querySelectorAll('.faq__question');
-const faqAnswer = document.querySelectorAll('.faq__answer');
+const faqContainer = document.querySelector('.faq__container');
+const faqAnswers = document.querySelectorAll('.faq__answer');
 
-const revealAnswer = (i) =>{
-    for(k = 0 ; k < faqQuestion.length; k++){
-        if(k != i){
-        faqAnswer[k].classList.remove('active');
-        faqicons[k].classList.remove('minus');
-        faqicons[k].src = "./assets/images/icon-plus.svg";
+faqContainer.addEventListener('click',(e)=>{
+    e.preventDefault();
+    if(e.target.classList.contains('faq__question') || e.target.classList.contains('icons')){
+        const faqAnswer = e.target.parentElement.querySelector('.faq__answer');
+        const iconImg = e.target.parentElement.querySelector('.icons');
+        if(faqAnswer.classList.contains('active')){
+            faqAnswer.classList.remove('active');
+            iconImg.setAttribute("src",'./assets/images/icon-plus.svg');
+        } else {
+            faqAnswers.forEach(el => {
+                el.classList.remove('active');
+                el.previousElementSibling.setAttribute("src",'./assets/images/icon-plus.svg');
+            });
+            faqAnswer.classList.add('active');
+            iconImg.setAttribute("src",'./assets/images/icon-minus.svg');
         }
     }
-
-    if(!faqAnswer[i].classList.contains('active')){
-        faqAnswer[i].classList.add('active');
-        faqicons[i].classList.remove('plus');
-        faqicons[i].classList.add('minus');
-        faqicons[i].src = "./assets/images/icon-minus.svg"
-    } else {
-        faqAnswer[i].classList.remove('active');
-        faqicons[i].classList.remove('minus');
-        faqicons[i].classList.remove('plus');
-        faqicons[i].src = "./assets/images/icon-plus.svg"
-    }
-}
-faqQuestion.forEach((el,i) => {
-    el.addEventListener('click',()=>{
-        revealAnswer(i);
-    });
-    const html = `<img src="./assets/images/icon-plus.svg" alt="" class="icons plus">`;
-    faqElements[i].insertAdjacentHTML("afterbegin",html);
-})
-
-const faqicons = document.querySelectorAll('.icons');
-faqicons.forEach((el,i) =>{
-    el.addEventListener('click',()=>{
-        revealAnswer(i);
-    });
 });

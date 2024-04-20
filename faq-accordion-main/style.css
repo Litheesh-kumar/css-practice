@@ -52,8 +52,8 @@ body{
 
 .faq__elements .icons{
     position: absolute;
+    top: 0;
     right: 2rem;
-    transform: translateY(-0.3rem);
     cursor: pointer;
 }
 

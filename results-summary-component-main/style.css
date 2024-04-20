@@ -102,32 +102,32 @@ body{
 .subject__icon{
     margin-right: 0.8rem;
 }
-.subject--red{
+.subject--reaction{
     background-color: var(--Light-red);
     color: #b1aeae;
 }
-.subject--red .subject{
+.subject--reaction .subject{
     color: red;
 }
-.subject--green{
+.subject--verbal{
     background-color: var(--Green-teal);
     color: #b1aeae;
 }
-.subject--green .subject{
+.subject--verbal .subject{
     color: green;
 }
-.subject--yellow{
+.subject--memory{
     background-color: var(--Orangey-yellow);
     color: #b1aeae;
 }
-.subject--yellow .subject{
+.subject--memory .subject{
     color: orange;
 }
-.subject--blue{
+.subject--visual{
     background-color: rgb(112, 114, 236,0.1);
     color: #b1aeae;
 }
-.subject--blue .subject{
+.subject--visual .subject{
     color: blue;
 }
 .btn{

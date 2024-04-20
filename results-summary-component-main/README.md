@@ -12,8 +12,8 @@
 
 ### Links
 
-- Solution URL: https://litheesh-kumar.github.io/css-practice/results-summary-component-main
-- Live Site URL: https://github.com/Litheesh-kumar/css-practice/edit/main/results-summary-component-main
+- Solution URL: https://github.com/Litheesh-kumar/css-practice/edit/main/results-summary-component-main
+- Live Site URL: https://litheesh-kumar.github.io/css-practice/results-summary-component-main
 
 ## My process
 

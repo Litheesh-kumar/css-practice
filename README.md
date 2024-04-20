@@ -3,3 +3,4 @@
 - https://litheesh-kumar.github.io/css-practice/social-links-profile-main
 - https://litheesh-kumar.github.io/css-practice/blog-preview-card-main
 - https://litheesh-kumar.github.io/css-practice/faq-accordion-main
+- https://litheesh-kumar.github.io/css-practice/results-summary-component-main

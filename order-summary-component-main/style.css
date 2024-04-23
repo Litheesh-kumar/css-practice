@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+:root{
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Pale-blue-light: hsla(225, 100%, 94%,30%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+html{
+    height: 120%;
+}
+body{
+    height: 100%;
+    font-family: "Red Hat Display", sans-serif;
+    display: grid;
+    grid-template-rows: auto 4rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background: url('./images/pattern-background-desktop.svg') top 0% left 0% /100% no-repeat,var(--Pale-blue) ;
+}
+
+.card__container{
+    max-width: 25rem;
+    /* padding: 2rem; */
+    text-align: center;
+    border-radius: 1rem;
+    background-color: var(--Very-pale-blue);
+    overflow: hidden;
+}
+.card__image{
+    width: 100%;
+    object-fit: cover;
+}
+.card__info{
+    padding:1rem 2rem;
+}
+.card__title{
+    color: var(--Dark-blue);
+    font-weight: 1000;
+    font-size: 1.6rem;
+}
+.card__description{
+    color: var(--Desaturated-blue);
+    font-weight: 500;
+}
+.plan__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--Pale-blue-light);
+    padding: 1rem;
+    margin: 1.2rem 0;
+}
+.plans{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
+}
+.plan{
+    color: var(--Dark-blue);
+    font-weight: 800;
+}
+.validity{
+    color: var(--Desaturated-blue);
+}
+.submit{
+    width: 100%;
+    border: none;
+    padding: 0.8rem 0;
+    color:#ffff;
+    background-color: var(--Bright-blue);
+    border-radius: 0.6rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: opacity 0.4s ease-in;
+}
+.cancel{
+    color: var(--Desaturated-blue);
+    font-weight: 800;
+    font-size:0.8rem;
+}
+.submit:hover{
+    opacity: 0.6;
+}
+.plan__change:hover{
+    text-decoration: none;
+}
+.cancel:hover{
+    color: var(--Dark-blue);
+}
+
+@media (max-width: 420px){
+    .card__container{
+        max-width: 20rem;
+    }
+    body{
+        background: url('./images/pattern-background-mobile.svg') 0%/cover no-repeat;
+    }
+}

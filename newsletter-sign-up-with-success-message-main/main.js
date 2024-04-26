@@ -4,7 +4,7 @@ const submitButton = document.querySelector('.submit');
 const closeButton = document.querySelector('.close');
 const cardContainer = document.querySelector('.card__container');
 const successContainer = document.querySelector('.success__container');
-
+const emailSpan = document.querySelector('.login__email');
 
 emailInput.addEventListener('focus',(e)=>{
     if(emailInput.classList.contains('error') || emailLabel.classList.contains('error')){
@@ -22,8 +22,10 @@ submitButton.addEventListener('click',(e)=>{
         emailInput.classList.add('error');
         return
     }
+
     cardContainer.classList.remove('show');
     setTimeout(()=>{
+        emailSpan.textContent = email;
         successContainer.classList.add('show');
     },400)
 });

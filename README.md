@@ -8,4 +8,6 @@
 - https://litheesh-kumar.github.io/web-development/interactive-rating-component-main
 - https://litheesh-kumar.github.io/web-development/nft-preview-card-component-main
 - https://litheesh-kumar.github.io/web-development/order-summary-component-main
+- https://litheesh-kumar.github.io/web-development/newsletter-sign-up-with-success-message-main
+
 

@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --Tomato: hsl(4, 100%, 67%);
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+    --Tomato-light: hsla(4, 100%, 67%,10%);
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    height: 100%;
+    margin: 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: auto 4rem;
+    background-color: var(--Charcoal-Grey);
+    position: relative;
+}
+
+.card__container{
+   display: grid;
+   grid-template-columns: minmax(10rem,28rem) 1fr;
+   /* align-items: center; */
+   justify-content: center;
+   background-color: var(--White);
+   padding:1rem;
+   border-radius: 1rem;
+   opacity: 0;
+   pointer-events: none;
+   transition: opacity 0.7s ease;
+}
+.card__image{
+    align-self: center;
+}
+.card__image img{
+    max-height: 400px;
+    object-fit: contain;
+}
+.form__container{
+    padding: 3rem;
+    padding-right: 2rem;
+}
+.form__container .container__title{
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+}
+.container__message{
+    color: var(--Charcoal-Grey);
+}
+.form__container .container__lists{
+    list-style: none;
+    padding: 0;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.container__lists li::before{
+    content: url('/assets/images/icon-list.svg');
+    padding-right: 0.8rem;
+}
+
+.list{
+    margin-bottom: 0.6rem;
+}
+.form__container .input__field{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 4rem;
+    margin: 1rem 0;
+    position: relative;
+}
+input{
+    height: 2.5rem;
+    padding-left: 1rem;
+}
+.email.error::after{
+    content: 'Valid Email Required';
+    color: var(--Tomato);
+    font-size: 0.8rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.input__field input.error{
+    outline:2px var(--Tomato) solid;
+    background-color: var(--Tomato-light);
+    color: var(--Tomato);
+    border:none;
+}
+
+.btn{
+    display: block;
+    height: 2.5rem;
+    width: 100%;
+    border-radius: 0.4rem;
+    border: none;
+    background-color: var(--Dark-Slate-Grey);
+    color: var(--White);
+    cursor: pointer;
+    transition: transform 0.7s ease-in;
+}
+.btn:hover{
+    background-color: var(--Tomato);
+}
+.btn:active{
+    transform: scale(1.2);
+}
+.success__container{
+    position: absolute;
+    background-color: var(--White);
+    max-width: 23rem;
+    justify-self: center;
+    padding: 2rem;
+    border-radius: 1.2rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.7s ease;
+  }
+.success__icon{
+    width:3rem;
+}
+.success__container .container__title{
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+.success__container .container__message{
+    font-size: 0.8rem;
+    line-height: 1rem;
+    font-weight: 400;
+}
+.container__message .login__email{
+    font-weight: 800;
+}
+.show{
+    opacity: 1;
+    pointer-events: all;
+}
+.attribution{
+    color: var(--White);
+}
+
+@media (max-width:750px){
+        .form__container .container__title{
+            font-size:2rem;
+            font-weight: 600;
+        }
+        .email.error::after{
+            font-size: 0.6rem;
+            top: 10%;
+        }
+}
+
+@media (max-width:550px){
+    body{
+        background-color: var(--White);
+    }
+    .card__container{
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+    .card__image{
+        width: 100%;
+        object-fit: contain;
+    }
+    .card__image img{
+        content: url('/assets/images/illustration-sign-up-mobile.svg');
+        width: 100%;
+    }
+    .email.error::after{
+        top: 0;
+        font-size: 0.8rem;
+    }
+    .close{
+        position: relative;
+        bottom: -10rem;
+    }
+    .attribution{
+        color: var(--Dark-Slate-Grey)
+    }
+}

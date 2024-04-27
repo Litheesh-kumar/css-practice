@@ -179,7 +179,7 @@ input{
         object-fit: contain;
     }
     .card__image img{
-        content: url('/assets/images/illustration-sign-up-mobile.svg');
+        content: url('./assets/images/illustration-sign-up-mobile.svg');
         width: 100%;
     }
     .email.error::after{

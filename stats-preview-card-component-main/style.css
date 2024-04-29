@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --Very-dark-blue-main-background: hsl(233, 47%, 7%);
+    --Dark-desaturated-blue-card-background: hsl(244, 38%, 16%);
+    --Soft-violet-accent: hsl(277, 64%, 61%);
+    --White-main-heading-stats: hsl(0, 0%, 100%);
+    --Slightly-transparent-white-main-paragraph: hsla(0, 0%, 100%, 0.75);
+    --Slightly-transparent-white-stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+html {
+    height: 100%;
+}
+body{
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto 4rem;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: var(--Very-dark-blue-main-background);
+}
+
+.section__card{
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(10rem,30rem) minmax(10rem,30rem);
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Dark-desaturated-blue-card-background);
+    border-radius: 0.5rem;
+}
+.info__container{
+    padding: 4rem;
+}
+.container__title{
+    font-weight: 800;
+    font-size: 2rem;
+    color: var(--White-main-heading-stats);
+}
+
+.container__title .violet{
+    color: var(--Soft-violet-accent);
+}
+.container__description{
+    color: var(--Slightly-transparent-white-main-paragraph);
+    line-height: 1.5rem;
+    font-weight: 200;
+    font-size: 0.9rem;
+    margin-bottom: 3rem;
+}
+.stats__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.value{
+    color: var(--White-main-heading-stats);
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+.value__title{
+    margin-top: 0.4rem;
+    color: var(--Slightly-transparent-white-stat-headings);
+    font-weight: 200;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+.image__container{
+    align-self: stretch;
+    position: relative;
+    background-color: var(--Soft-violet-accent);
+
+}
+.image__container img{
+    height: 100%;
+    width: 100%;
+    mix-blend-mode: multiply;
+}
+.attribution{
+    color: var(--White-main-heading-stats);
+}
+
+@media (max-width:640px){
+    .section__card{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 400px){
+    .image__container img{
+        content: url('./images/image-header-mobile.jpg');
+    }
+    .stats__container{
+        flex-direction: column;
+    }
+}
